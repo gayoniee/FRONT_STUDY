@@ -1,0 +1,62 @@
+.body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 100vh;
+}
+
+.logo{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.logo-a{
+    margin-top: 15px;
+    width: 19px;
+    height: 21px;
+}
+
+.middle-section{
+    border-bottom: 0.1px solid;
+    border-color: rgb(235, 231, 231);
+}
+
+.login-bar{
+   border: none;
+   text-align: center;
+   font-weight: 300px;
+}
+
+.login-button{
+    width: 200px;
+    height: 30px;
+    background: #3b84ff;
+    color: #ffffff;
+    border-radius: 50px;
+    border-style: none;
+
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+
+.sign-up-button{
+    width: 200px;
+    height: 30px;
+    background: #312459;
+    color: #ffffff;
+    border-radius: 50px;
+    border-style: none;
+    margin-bottom: 15px;
+}
+
+.text{
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.check{
+    font-size: 15px;
+}
+
