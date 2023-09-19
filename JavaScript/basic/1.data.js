@@ -132,7 +132,7 @@ console.log(typeof isFalse);
 /**
  * undefined
  * 
- * 사용자가 직접 값을 초기화하지 않았을 때
+ * 개발자가 직접 값을 초기화하지 않았을 때
  * 지정되는 값이다.
  * 
  * undefined를 직접 넣어주는 것을 지양해야함
