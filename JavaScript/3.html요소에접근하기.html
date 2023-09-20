@@ -85,14 +85,16 @@
     <form>
         <fieldset>
             <legend>취미</legend>
+            <input type="checkbox" name="hobby" value="전체선택" id="all" onchange="allCheck()">
+            <label for="all">전체선택</label>
 
-            <input type="checkbox" name="hobby" value="game" id="game">
+            <input type="checkbox" name="hobby" value="game" id="game" onchange="checkBoxTrigger()">
             <label for="game">게임</label>
 
-            <input type="checkbox" name="hobby" value="movie" id="movie">
+            <input type="checkbox" name="hobby" value="movie" id="movie" onchange="checkBoxTrigger()">
             <label for="movie">영화</label>
 
-            <input type="checkbox" name="hobby" value="sports" id="sports">
+            <input type="checkbox" name="hobby" value="sports" id="sports" onchange="checkBoxTrigger()">
             <label for="sports">운동</label>
         </fieldset>
     </form>
@@ -101,6 +103,29 @@
     <button onclick="accessName()">name으로 접근</button>
 
     <script>
+        function allCheck(){
+            const allCheckBox = document.getElementById('all');
+            console.log(allCheckBox.checked);
+
+            let hobby = document.getElementsByName('hobby');
+            for(let box of hobby){
+                box.checked = allCheckBox.checked;
+            }
+        }
+
+        function checkBoxTrigger(){
+            let allCheck = true;
+            let hobby = document.getElementsByName('hobby');
+            for(let box of hobby){
+                if(!box.checked){
+                    allCheck = false;
+                }
+            }
+
+            const allCheckBox = document.getElementById('all');
+            allCheckBox.checked = allCheck;
+        }
+
         function accessName(){
             //name속성으로 요소 가져올 때
             //document.getElementsByName('name속성값'); => 선택한 속성값을 가진 요소의 배열 반환

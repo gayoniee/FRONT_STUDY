@@ -31,15 +31,20 @@
     <script>
       // 스크립트작성
         function table_make(){
-            var row = prompt('행의 개수');
-            var column = prompt('열의 개수');  
+            var row = window.prompt('행의 개수');
+            var column = window.prompt('열의 개수');  
             
-            for(var i = 0; i <row.value; i++){
+            document.write("<table border = '2px;'>")
+            for(var i = 0; i <row; i++){
                 //tr
-                for(var j = 0; j <column.value; j++){
+                document.write("<tr height = '30px;'>");
+                for(var j = 0; j <column; j++){
                     //td
+                    document.write("<td width = '30px'></td>");
                 }
+                document.write("</tr>");
             }
+            document.write("</table>");
         }
     </script>
 
