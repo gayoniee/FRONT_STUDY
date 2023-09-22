@@ -201,6 +201,8 @@
             area5.innerHTML += 'age속성이 있을까? : ' + ('age' in student) + '<br>';
             
             with(student){
+                // 객체명을 반복해서 사용하지 않고 객체 내부의 값을 가져오기 위해 사용
+                // with로 지정한 영역에서는 변수를 검사할 때 객체내에 존재하는지를 먼저 검사
                 area5.innerHTML += '학생이름 : ' + name + '<br>';
                 area5.innerHTML += '국어점수 : ' + kor + '<br>';
                 area5.innerHTML += '수학점수 : ' + math + '<br>';
