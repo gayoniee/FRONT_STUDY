@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+            아이디 : <input type="text" name="userId" id="userId"><br>
+            <span id="idMessage"></span>
+        </div>
+        <div>
+            비밀번호 : <input type="password" name="userPwd" id="userPwd"><br>
+        </div>
+        <div>
+            비밀번호 확인 : <input type="password" id="checkPwd"><br>
+            <span id="checkPwdMessage"></span>
+        </div>
+        <div>
+            이름 : <input type="text" name = "userName" id="userName"><br>
+            <span id="nameMessage"></span>
+        </div>
+
+        <button onclick="">회원가입</button>
+    </form>
+
+    <script>
+        const userId = document.getElementById('userId');
+        userId.addEventListener('input', function(ev){
+            // 'user01’이라는 아이디만 저장되어 있다는 설정
+            // 'user01'이 아니라면 아이디 필드 옆에 '사용 가능한 아이디입니다.'가 초록 글자로 
+            // 'user01'이면 '이미 존재하는 아이디입니다.'가 빨간 글자로 
+            const idMessage = document.getElementById('idMessage');
+            if(userId.value === 'userId'){
+                
+            }else{
+                
+            }
+        })
+    </script>
+</body>
+</html>
