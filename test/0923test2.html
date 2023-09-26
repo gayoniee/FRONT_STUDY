@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        .none-calculator{
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Practice2</h1>
+    <div style="display: flex;">
+        <input type="number" id="number1">
+        <select id="calcul-select">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="number" id="number2">
+        <button onclick="calculator()">=</button>
+        <input type="text" readonly id="result">
+    </div>
+
+    <script>
+        function calculator(){
+            const operator = document.getElementById('calcul-select').value;
+            const num1 = Number(document.getElementById('number1').value);
+            const num2 = Number($('#number2').val());
+
+            const resultInput = document.getElementById('result');
+            resultInput.className = '';
+            switch(operator){
+                case '+':{
+                    resultInput.value = num1 + num2;
+                }break;
+                case '-':{
+                    resultInput.value = num1 - num2;
+                }break;
+                case '*':{
+                    resultInput.value = num1 * num2;
+                }break;
+                case '/':
+                case '%':{
+                    if(num2 === 0){
+                        resultInput.className = 'none-calculator'
+                        resultInput.value = '연산불가';
+                    }else if(operator === '/'){
+                        resultInput.value = num1 / num2;
+                    }else{
+                        resultInput.value = num1 % num2;
+                    }
+                }break;
+            }
+        }
+    </script>
+</body>
+</html>
