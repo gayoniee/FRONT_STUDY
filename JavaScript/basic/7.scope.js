@@ -2,7 +2,7 @@
  * Scope
  */
 
-var number1 = 20;
+var number1 = 20;  //-> var는 함수 아니면 스코프영역을 만들지 않음
 
 function test1(){
     console.log(number1);
