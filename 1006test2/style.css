@@ -1,0 +1,38 @@
+#form{
+    border: 1px solid rgb(219, 218, 218);
+    background-color: rgb(245, 244, 244);
+    width: 350px;
+    height: 400px;
+}
+
+label{
+    margin-left: 5%;
+}
+
+input{
+    background-color: rgb(245, 244, 244);
+    border-width: 0 0 1px;
+    border-style: dashed;
+    float: right;
+    margin-right: 10%;
+}
+
+input:focus{
+    outline: none;
+}
+
+.area{
+    color: gray;
+    font-size: 5px;
+    margin-left: 40%;
+}
+
+button{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10%;
+    border: none;
+    background-color: rgb(208, 230, 212);
+}
