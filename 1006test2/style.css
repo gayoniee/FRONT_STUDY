@@ -27,11 +27,17 @@ input:focus{
     margin-left: 40%;
 }
 
+.container{
+    padding-top: 2%;
+    height: 45px;
+}
+
 button{
     width: 90%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20%;
     height: 10%;
     border: none;
     background-color: rgb(208, 230, 212);
