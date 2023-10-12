@@ -14,7 +14,7 @@ function setTodo(node){
   
   //객체 삭제
   function removeTodo(todoList, node) {
-    const index = -1;
+    let index = -1;
     for(let i = 0; i < todoList.length; i++){
       if(todoList[i].date === node.date){
         index = i;
@@ -48,7 +48,6 @@ function setTodo(node){
   
       // todo요소 만들고 붙여주기
       const todoNode = document.createElement('div');
-      todoNode.date = new Date();
       todoNode.innerText = todoTitle;
   
       todoNode.onclick = function() {
@@ -139,9 +138,9 @@ function setTodo(node){
         // 특정 자료를 삭제할 때 많이 사용
         todoList = todoList.filter(function(item){
           let itemTime = new Date(item.date).getTime();
-          let unitTime = new Date(unit.date).getTime();
+          let nodeTime = new Date(todoNode.date).getTime();
   
-          return (itemTime !== unitTime);
+          return (itemTime !== nodeTime);
         })
   
         //삭제 후 객체 변경
